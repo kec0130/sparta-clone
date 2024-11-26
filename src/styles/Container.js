@@ -6,3 +6,9 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 24px;
 `;
+
+export const Section = styled.section`
+  padding: 100px 0;
+  background-color: ${(props) =>
+    props.$bgGray ? "var(--bg-gray-secondary)" : "white"};
+`;

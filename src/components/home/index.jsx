@@ -2,21 +2,27 @@ import styled from "styled-components";
 import Hero from "./Hero";
 import Banners from "./Banners";
 import FreeLectures from "./FreeLectures";
+import Courses from "./Courses";
+import BootCamp from "./Bootcamp";
 
 export default function Home() {
   return (
     <>
-      <TopContainer>
-        <Hero />
-        <Banners />
-        <FreeLectures />
-      </TopContainer>
+      <Hero />
+      <Banners />
+      <FreeLectures />
+      <Courses />
+      <BootCamp />
+      <Bottom>누구나 큰일 낼 수 있어, 스파르타코딩클럽</Bottom>
     </>
   );
 }
 
-const TopContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
+const Bottom = styled.div`
+  padding: 60px 120px 100px;
+  background-color: var(--bg-gray-secondary);
+  color: var(--text-quaternary);
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
 `;

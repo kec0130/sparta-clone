@@ -18,9 +18,11 @@ export default function Hero() {
       <CategoryList>
         {CATEGORIES.map((category) => (
           <li key={category.title}>
-            {category.badge && <span>{category.badge}</span>}
-            <img src={category.image} alt={category.title} />
-            <p>{category.title}</p>
+            <a href={category.link}>
+              {category.badge && <span>{category.badge}</span>}
+              <img src={category.image} alt={category.title} />
+              <p>{category.title}</p>
+            </a>
           </li>
         ))}
       </CategoryList>
@@ -33,6 +35,7 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   gap: 88px;
+  padding-bottom: 100px;
 `;
 
 const BgGradient = styled.div`
@@ -82,7 +85,7 @@ const CategoryList = styled.ul`
   align-items: center;
   gap: 24px;
 
-  li {
+  a {
     position: relative;
     display: flex;
     flex-direction: column;

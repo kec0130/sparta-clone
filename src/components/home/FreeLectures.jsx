@@ -1,18 +1,18 @@
 import styled from "styled-components";
-import { Container } from "../../styles/Container";
+import { Container, Section } from "../../styles/Container";
 import { FREE_LECTURES } from "../../constants/home";
 
 export default function FreeLectures() {
   return (
     <Section>
       <Container>
-        <div className="title">
+        <Title>
           <h2>처음이라면 무료로 시작해보세요</h2>
           <p>따라만 하면 1시간만에 결과물 완성!</p>
-        </div>
-        <ul>
+        </Title>
+        <LectureList>
           {FREE_LECTURES.map((lecture) => (
-            <Lecture key={lecture.title}>
+            <li key={lecture.title}>
               <a href={lecture.link}>
                 <img src={lecture.image} alt={lecture.title} />
                 <div className="bottom">
@@ -30,42 +30,36 @@ export default function FreeLectures() {
                   <span>무료</span>
                 </div>
               </a>
-            </Lecture>
+            </li>
           ))}
-        </ul>
+        </LectureList>
       </Container>
     </Section>
   );
 }
 
-const Section = styled.section`
-  padding-bottom: 100px;
+const Title = styled.div`
+  text-align: center;
+  margin-bottom: 40px;
 
-  .title {
-    text-align: center;
-    margin-bottom: 40px;
-
-    h2 {
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    p {
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--text-tertiary);
-    }
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 6px;
   }
 
-  ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-tertiary);
   }
 `;
 
-const Lecture = styled.li`
+const LectureList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
   a {
     display: flex;
     flex-direction: column;
@@ -94,6 +88,11 @@ const Lecture = styled.li`
       font-size: 14px;
       font-weight: 600;
       color: var(--text-secondary);
+      transition: background 0.2s;
+
+      &:hover {
+        background: var(--bg-gray-secondary);
+      }
     }
 
     h3 {
