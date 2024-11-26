@@ -4,39 +4,41 @@ import { FREE_LECTURES } from "../../constants/home";
 
 export default function FreeLectures() {
   return (
-    <LectureSection>
-      <div className="title">
-        <h2>처음이라면 무료로 시작해보세요</h2>
-        <p>따라만 하면 1시간만에 결과물 완성!</p>
-      </div>
-      <ul>
-        {FREE_LECTURES.map((lecture) => (
-          <Lecture key={lecture.title}>
-            <a href={lecture.link}>
-              <img src={lecture.image} alt={lecture.title} />
-              <div className="bottom">
-                <button>
-                  <img
-                    src="https://static.spartacodingclub.kr/TeamSparta-Inc/scc-frontend/assets/icons/icon_thunder.svg"
-                    alt="번개 아이콘"
-                  />
-                  바로 수강신청
-                </button>
-                <div>
-                  <h3>{lecture.title}</h3>
-                  <p>{lecture.description}</p>
+    <Section>
+      <Container>
+        <div className="title">
+          <h2>처음이라면 무료로 시작해보세요</h2>
+          <p>따라만 하면 1시간만에 결과물 완성!</p>
+        </div>
+        <ul>
+          {FREE_LECTURES.map((lecture) => (
+            <Lecture key={lecture.title}>
+              <a href={lecture.link}>
+                <img src={lecture.image} alt={lecture.title} />
+                <div className="bottom">
+                  <button>
+                    <img
+                      src="https://static.spartacodingclub.kr/TeamSparta-Inc/scc-frontend/assets/icons/icon_thunder.svg"
+                      alt="번개 아이콘"
+                    />
+                    바로 수강신청
+                  </button>
+                  <div>
+                    <h3>{lecture.title}</h3>
+                    <p>{lecture.description}</p>
+                  </div>
+                  <span>무료</span>
                 </div>
-                <span>무료</span>
-              </div>
-            </a>
-          </Lecture>
-        ))}
-      </ul>
-    </LectureSection>
+              </a>
+            </Lecture>
+          ))}
+        </ul>
+      </Container>
+    </Section>
   );
 }
 
-const LectureSection = styled(Container)`
+const Section = styled.section`
   padding-bottom: 100px;
 
   .title {

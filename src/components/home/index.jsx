@@ -5,15 +5,17 @@ import FreeLectures from "./FreeLectures";
 
 export default function Home() {
   return (
-    <MainContainer>
-      <Hero />
-      <Banners />
-      <FreeLectures />
-    </MainContainer>
+    <>
+      <TopContainer>
+        <Hero />
+        <Banners />
+        <FreeLectures />
+      </TopContainer>
+    </>
   );
 }
 
-const MainContainer = styled.div`
+const TopContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 100px;

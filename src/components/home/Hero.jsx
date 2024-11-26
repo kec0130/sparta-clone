@@ -4,7 +4,7 @@ import { CATEGORIES } from "../../constants/home";
 
 export default function Hero() {
   return (
-    <HeroSection>
+    <Section>
       <BgGradient>
         <div />
       </BgGradient>
@@ -24,11 +24,11 @@ export default function Hero() {
           </li>
         ))}
       </CategoryList>
-    </HeroSection>
+    </Section>
   );
 }
 
-const HeroSection = styled.section`
+const Section = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
