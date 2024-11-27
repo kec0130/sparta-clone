@@ -19,8 +19,8 @@ export default function Home() {
 }
 
 const Bottom = styled.div`
-  padding: 60px 120px 100px;
   background-color: var(--bg-gray-secondary);
+  padding: 60px 120px 100px;
   color: var(--text-quaternary);
   font-size: 18px;
   font-weight: 600;

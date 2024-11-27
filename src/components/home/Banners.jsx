@@ -27,9 +27,9 @@ const Banner = styled.div`
   display: flex;
   align-items: center;
   height: 240px;
+  background: #ff4759;
   border-radius: 12px;
   overflow: hidden;
-  background: #ff4759;
   padding: 32px 0px 32px 60px;
   cursor: pointer;
 

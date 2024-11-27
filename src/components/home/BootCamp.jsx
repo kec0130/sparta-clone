@@ -110,10 +110,10 @@ const CampList = styled.ul`
   a {
     display: flex;
     gap: 24px;
+    background: white;
     padding: 24px;
     border-radius: 12px;
     border: 1px solid var(--bg-gray-primary);
-    background: white;
     box-shadow: 0px 8px 24px 0px rgba(129, 137, 143, 0.12);
     transition: transform 0.2s ease-in-out;
 
@@ -132,19 +132,19 @@ const CampList = styled.ul`
       justify-content: space-between;
       align-items: center;
 
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
       span {
-        padding: 3px 6px;
-        border-radius: 4px;
         font-size: 13px;
         font-weight: 500;
         color: var(--text-tertiary);
         background: var(--bg-gray-primary);
+        padding: 3px 6px;
+        border-radius: 4px;
       }
-    }
-
-    h3 {
-      font-size: 18px;
-      font-weight: 600;
     }
 
     p {

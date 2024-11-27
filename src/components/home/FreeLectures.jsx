@@ -65,7 +65,7 @@ const LectureList = styled.ul`
     flex-direction: column;
     gap: 16px;
 
-    > img {
+    & > img {
       width: 100%;
       height: 100%;
       border-radius: 8px;
@@ -83,8 +83,8 @@ const LectureList = styled.ul`
       align-items: center;
       gap: 2px;
       height: 44px;
-      border-radius: 8px;
       border: 1px solid var(--bg-gray-primary);
+      border-radius: 8px;
       font-size: 14px;
       font-weight: 600;
       color: var(--text-secondary);
@@ -96,19 +96,16 @@ const LectureList = styled.ul`
     }
 
     h3 {
-      font-size: 16px;
       font-weight: 600;
       margin-bottom: 6px;
 
       + p {
-        font-size: 16px;
         font-weight: 400;
         color: var(--text-tertiary);
       }
     }
 
     span {
-      font-size: 16px;
       font-weight: 600;
       color: var(--primary-color);
     }

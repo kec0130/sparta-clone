@@ -8,33 +8,32 @@ export default function Hero() {
       <BgGradient>
         <div />
       </BgGradient>
-      <Heading>
-        <h1>누구나 큰일 낼 수 있어</h1>
-        <h1 className="primary">
-          스파르타코딩클럽
-          <img src="/logo.svg" alt="스파르타코딩클럽 로고" />
-        </h1>
-      </Heading>
-      <CategoryList>
-        {CATEGORIES.map((category) => (
-          <li key={category.title}>
-            <a href={category.link}>
-              {category.badge && <span>{category.badge}</span>}
-              <img src={category.image} alt={category.title} />
-              <p>{category.title}</p>
-            </a>
-          </li>
-        ))}
-      </CategoryList>
+      <Container>
+        <Heading>
+          <h1>누구나 큰일 낼 수 있어</h1>
+          <h1>
+            스파르타코딩클럽
+            <img src="/logo.svg" alt="스파르타코딩클럽 로고" />
+          </h1>
+        </Heading>
+        <CategoryList>
+          {CATEGORIES.map((category) => (
+            <li key={category.title}>
+              <a href={category.link}>
+                {category.badge && <span>{category.badge}</span>}
+                <img src={category.image} alt={category.title} />
+                <p>{category.title}</p>
+              </a>
+            </li>
+          ))}
+        </CategoryList>
+      </Container>
     </Section>
   );
 }
 
 const Section = styled.section`
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 88px;
   padding-bottom: 100px;
 `;
 
@@ -59,16 +58,13 @@ const BgGradient = styled.div`
   }
 `;
 
-const Heading = styled(Container)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 108px;
+const Heading = styled.div`
+  text-align: center;
+  padding: 108px 0 88px;
   font-weight: 700;
   font-size: 40px;
 
-  h1.primary {
+  h1:last-child {
     color: var(--primary-color);
 
     img {
@@ -84,6 +80,7 @@ const CategoryList = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 24px;
+  flex-wrap: wrap;
 
   a {
     position: relative;
@@ -113,8 +110,8 @@ const CategoryList = styled.ul`
       font-size: 11px;
       padding: 2px 6px;
       border-radius: 6px;
-      background: white;
       border: 1px solid var(--primary-color);
+      background: white;
       color: var(--primary-color);
       font-weight: 700;
     }

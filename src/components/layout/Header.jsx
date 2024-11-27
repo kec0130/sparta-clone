@@ -35,16 +35,13 @@ const HeaderContainer = styled.header`
   width: 100%;
 `;
 
-const HeaderRow = styled.div`
+const HeaderTop = styled.div`
   display: flex;
-  align-items: center;
-  background-color: white;
-  border-bottom: 1px solid var(--bg-gray-primary);
-`;
-
-const HeaderTop = styled(HeaderRow)`
-  height: 42px;
   justify-content: flex-end;
+  align-items: center;
+  height: 42px;
+  border-bottom: 1px solid var(--bg-gray-primary);
+  background-color: white;
 
   .right {
     display: flex;
@@ -56,10 +53,10 @@ const HeaderTop = styled(HeaderRow)`
   a {
     display: flex;
     align-items: center;
+    gap: 4px;
     color: var(--text-tertiary);
     font-size: 14px;
     font-weight: 400;
-    gap: 4px;
   }
 
   .divider {
@@ -69,8 +66,12 @@ const HeaderTop = styled(HeaderRow)`
   }
 `;
 
-const HeaderBottom = styled(HeaderRow)`
+const HeaderBottom = styled.div`
+  display: flex;
+  align-items: center;
   height: 60px;
+  border-bottom: 1px solid var(--bg-gray-primary);
+  background-color: white;
 
   ${Container} {
     display: flex;
@@ -80,13 +81,13 @@ const HeaderBottom = styled(HeaderRow)`
 `;
 
 const LoginButton = styled.button`
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  color: var(--primary-color);
+  font-size: 13px;
+  padding: 9px 12px;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 9px 12px;
-  border-radius: 4px;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-  font-size: 13px;
-  height: 36px;
 `;
