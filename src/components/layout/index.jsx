@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
     <>
       <Header />
       <Main>{children}</Main>
-      {/* Footer */}
+      <Footer />
       <FloatingButton>
         <img
           src="https://cf.channel.io/pub-file/18016/61781dd2660095eb4df9/group-2439.png"
