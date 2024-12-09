@@ -37,7 +37,7 @@ export default function BootCamp() {
                       <span>선착순 100명</span>
                     </div>
                     <p>{camp.description}</p>
-                    <span>무료</span>
+                    <span className="free">무료</span>
                   </div>
                 </a>
               </li>
@@ -80,7 +80,7 @@ const Statistic = styled.div`
   padding: 20px 40px;
   background: var(--bg-gray-primary);
   border-radius: 12px;
-  flex-shrink: 0;
+  flex-shrink: 0; // 찌그러짐 방지
 
   h3 {
     font-size: 18px;
@@ -154,7 +154,7 @@ const CampList = styled.ul`
       margin: 10px 0 16px;
     }
 
-    span {
+    .free {
       font-size: 18px;
       font-weight: 600;
       color: var(--primary-color);

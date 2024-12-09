@@ -27,7 +27,7 @@ export default function FreeLectures() {
                     <h3>{lecture.title}</h3>
                     <p>{lecture.description}</p>
                   </div>
-                  <span>무료</span>
+                  <span className="free">무료</span>
                 </div>
               </a>
             </li>
@@ -57,8 +57,17 @@ const Title = styled.div`
 
 const LectureList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 40px 24px;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  /* ⬆️ 반응형 그리드 한 줄로 해결 */
+
+  /* ⬇️ column 개수 직접 지정 */
+  /* grid-template-columns: repeat(4, 1fr); */
+
+  /* media query로 column 개수 조정 */
+  /* @media (max-width: 820px) {
+    grid-template-columns: repeat(2, 1fr);
+  } */
 
   a {
     display: flex;
@@ -105,7 +114,7 @@ const LectureList = styled.ul`
       }
     }
 
-    span {
+    .free {
       font-weight: 600;
       color: var(--primary-color);
     }

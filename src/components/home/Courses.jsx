@@ -40,6 +40,7 @@ const Title = styled.div`
     font-size: 40px;
     font-weight: 700;
 
+    /* 텍스트 컬러 gradient */
     &:last-child {
       background: linear-gradient(
         90deg,
@@ -54,8 +55,9 @@ const Title = styled.div`
 
 const CourseList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
 
   a {
     display: flex;
@@ -87,7 +89,7 @@ const CourseList = styled.ul`
       font-size: 20px;
       font-weight: 600;
       color: var(--text-quaternary);
-      white-space: pre-line;
+      white-space: pre-line; // 개행문자(\n) 줄바꿈
       line-height: 1.3;
     }
 

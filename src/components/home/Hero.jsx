@@ -37,6 +37,7 @@ const Section = styled.section`
   padding-bottom: 100px;
 `;
 
+// 배경색 gradient
 const BgGradient = styled.div`
   position: absolute;
   z-index: -1;
